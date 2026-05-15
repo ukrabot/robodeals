@@ -2,8 +2,8 @@ name: 🤖 RoboDeals Daily Update
 
 on:
   schedule:
-    - cron: "0 10 * * *"   # 10:00 UTC = 07:00 Chile (horario verano)
-  workflow_dispatch:        # Permite ejecución manual desde GitHub UI
+    - cron: "0 10 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -11,7 +11,7 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 60     # 100 productos con GPT puede tardar ~30-45 min
+    timeout-minutes: 60
 
     steps:
       - name: 📥 Checkout
@@ -26,23 +26,15 @@ jobs:
           cache: pip
 
       - name: 📦 Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install requests openai
 
       - name: 🚀 Run pipeline
         env:
-          # AliExpress Affiliates
           ALIEXPRESS_APP_KEY:     ${{ secrets.ALIEXPRESS_APP_KEY }}
           ALIEXPRESS_APP_SECRET:  ${{ secrets.ALIEXPRESS_APP_SECRET }}
           ALIEXPRESS_TRACKING_ID: ${{ secrets.ALIEXPRESS_TRACKING_ID }}
-          # Cloudflare R2
-          CF_ACCOUNT_ID:          ${{ secrets.CF_ACCOUNT_ID }}
-          CF_R2_ACCESS_KEY:       ${{ secrets.CF_R2_ACCESS_KEY }}
-          CF_R2_SECRET_KEY:       ${{ secrets.CF_R2_SECRET_KEY }}
-          CF_R2_BUCKET:           ${{ secrets.CF_R2_BUCKET }}
-          CF_R2_PUBLIC_URL:       ${{ secrets.CF_R2_PUBLIC_URL }}
-          # OpenAI
+          GH_TOKEN:               ${{ secrets.GH_TOKEN }}
           OPENAI_API_KEY:         ${{ secrets.OPENAI_API_KEY }}
-          # Site
           SITE_URL:               ${{ secrets.SITE_URL }}
         run: python scripts/fetch_and_build.py
 
