@@ -40,7 +40,7 @@ KEYWORDS = [
 
 # ── AliExpress ─────────────────────────────────────────────────────────────────
 def ali_sign(params):
-    s = ALI_APP_SECRET + "".join(f"{k}{v}" for k,v in sorted(params.items())) + ALI_APP_SECRET
+    s = "".join(f"{k}{v}" for k,v in sorted(params.items()))
     return hmac.new(ALI_APP_SECRET.encode(), s.encode(), hashlib.sha256).hexdigest().upper()
 
 def ali_request(method, extra):
