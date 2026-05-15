@@ -60,7 +60,7 @@ def fetch_ali_products(keyword, page_size=20):
             "sort": "SALE_PRICE_ASC", "target_currency": "USD", "target_language": "EN",
             "fields": ("product_id,product_title,product_main_image_url,"
                        "sale_price,original_price,discount,commission_rate,"
-                       "product_detail_url,evaluate_rate,second_level_category_name"),
+                       "promotion_link,product_detail_url,evaluate_rate,second_level_category_name"),
         })
         items = (data["aliexpress_affiliate_product_query_response"]
                      ["resp_result"]["result"]["products"]["product"])
@@ -347,7 +347,7 @@ def main():
                 "id": pid, "slug": slugify(title, pid), "title": title,
                 "price": price, "original_price": item.get("original_price",""),
                 "discount": item.get("discount",""), "commission": item.get("commission_rate",""),
-                "rating": item.get("evaluate_rate",""), "url": item.get("product_detail_url",""),
+                "rating": item.get("evaluate_rate",""), "url": item.get("promotion_link") or item.get("product_detail_url",""),
                 "gh_image": gh_url, "category": item.get("second_level_category_name","Robotics & Tech"),
                 "keyword": kw, "description": desc, "fetched_at": now,
             }
