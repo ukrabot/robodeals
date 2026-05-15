@@ -1,18 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RoboDeals — Coming Soon</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>RoboDeals — Robotics & Tech Gadgets from AliExpress</title>
+  <meta name="description" content="Best robotics and tech gadgets from AliExpress. Arduino, drones, 3D printers, robot kits. Updated daily.">
+  <link rel="canonical" href="https://ukrabot.github.io/robodeals">
+  <link rel="sitemap" type="application/xml" href="https://ukrabot.github.io/robodeals/sitemap.xml">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; background:#0a0a0f; color:#00e5ff; font-family:monospace;
-           display:flex; align-items:center; justify-content:center;
-           min-height:100vh; flex-direction:column; gap:16px; }
-    p { color:#8888aa; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#0a0a0f;--surface:#13131a;--surface2:#1c1c27;--border:#2a2a3a;
+          --accent:#00e5ff;--accent2:#7c3aed;--text:#e8e8f0;--muted:#8888aa;--red:#ff4466;--radius:14px}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    header{position:sticky;top:0;z-index:100;background:rgba(10,10,15,.9);backdrop-filter:blur(20px);
+            border-bottom:1px solid var(--border);padding:0 20px}
+    .hi{max-width:1600px;margin:0 auto;height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{font-family:'Space Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--accent);text-decoration:none}
+    .logo em{color:var(--text);font-style:normal}
+    .sw{flex:1;max-width:460px;display:flex;align-items:center;background:var(--surface2);
+         border:1px solid var(--border);border-radius:40px;padding:0 16px;gap:8px}
+    .sw input{background:none;border:none;outline:none;color:var(--text);font:inherit;font-size:.9rem;width:100%;padding:10px 0}
+    .upd{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--muted);text-align:right;line-height:1.6}
+    .hero{text-align:center;padding:52px 20px 32px}
+    .hero h1{font-family:'Space Mono',monospace;font-size:clamp(1.8rem,5vw,3.2rem);line-height:1.1;
+              background:linear-gradient(135deg,var(--accent),var(--accent2));
+              -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .hero p{margin-top:12px;color:var(--muted);font-size:.95rem;max-width:480px;margin-inline:auto}
+    .stats{display:flex;justify-content:center;gap:32px;margin-top:28px;flex-wrap:wrap}
+    .stat{font-family:'Space Mono',monospace;font-size:.75rem;color:var(--muted)}
+    .stat strong{display:block;font-size:1.3rem;color:var(--accent)}
+    .gw{max-width:1600px;margin:0 auto;padding:8px 16px 80px}
+    .grid-sizer,.card{width:calc(20% - 12px)}
+    @media(max-width:1200px){.grid-sizer,.card{width:calc(25% - 11px)}}
+    @media(max-width:900px){.grid-sizer,.card{width:calc(33.33% - 10px)}}
+    @media(max-width:600px){.grid-sizer,.card{width:calc(50% - 8px)}}
+    .card{margin-bottom:14px;background:var(--surface);border:1px solid var(--border);
+           border-radius:var(--radius);text-decoration:none;color:inherit;display:block;
+           overflow:hidden;position:relative;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .card:hover{transform:translateY(-4px);border-color:var(--accent);
+                 box-shadow:0 12px 40px rgba(0,0,0,.6),0 0 0 1px var(--accent)}
+    .badge{position:absolute;top:8px;left:8px;z-index:2;background:var(--red);color:#fff;
+            font-family:'Space Mono',monospace;font-size:.6rem;font-weight:700;padding:2px 7px;border-radius:20px}
+    .iw{width:100%;overflow:hidden;background:var(--surface2)}
+    .iw img{width:100%;display:block;object-fit:cover;opacity:0;transition:transform .4s,opacity .4s}
+    .iw img.loaded{opacity:1} .card:hover .iw img{transform:scale(1.06)}
+    .info{padding:10px 10px 12px}
+    .title{font-size:.78rem;font-weight:500;line-height:1.4;display:-webkit-box;
+            -webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .bottom{display:flex;justify-content:space-between;align-items:center;margin-top:8px;gap:4px;flex-wrap:wrap}
+    .price{font-family:'Space Mono',monospace;font-size:.88rem;font-weight:700;color:var(--accent)}
+    .tag{font-size:.6rem;color:var(--muted);background:var(--surface2);border:1px solid var(--border);
+          border-radius:20px;padding:2px 6px;font-family:'Space Mono',monospace;white-space:nowrap;overflow:hidden;max-width:90px;text-overflow:ellipsis}
+    .empty{text-align:center;padding:80px 20px;color:var(--muted);font-family:'Space Mono',monospace;display:none}
+    footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);
+            font-size:.72rem;color:var(--muted);font-family:'Space Mono',monospace;line-height:1.9}
   </style>
 </head>
 <body>
-  <h1>🤖 RoboDeals</h1>
-  <p>First GitHub Actions run pending. Check back soon.</p>
-</body>
-</html>
+<header><div class="hi">
+  <a class="logo" href="https://ukrabot.github.io/robodeals">🤖 Robo<em>Deals</em></a>
+  <div class="sw">
+    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+    </svg>
+    <input type="text" id="si" placeholder="Search robots, drones, Arduino…" autocomplete="off">
+  </div>
+  <div class="upd">🔄 2026-05-15 13:07 UTC</div>
+</div></header>
+<section class="hero">
+  <h1>Robotics &amp;<br>Tech Gadgets</h1>
+  <p>Top AliExpress affiliate deals, updated daily.</p>
+  <div class="stats">
+    <div class="stat"><strong id="tc">0</strong>products</div>
+    <div class="stat"><strong>100</strong>added daily</div>
+    <div class="stat"><strong>4–7%</strong>commission</div>
+  </div>
+</section>
+<div class="gw">
+  <div class="grid" id="grid"><div class="grid-sizer"></div></div>
+  <div class="empty" id="empty">No products found.</div>
+</div>
+<footer>RoboDeals — Affiliate links · © 2026</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js"></script>
+<script>
+  const g = document.getElementById('grid');
+  const m = new Masonry(g,{itemSelector:'.card',columnWidth:'.grid-sizer',percentPosition:true,gutter:14,transitionDuration:'0.3s'});
+  imagesLoaded(g).on('progress',(i,r)=>{r.img.classList.add('loaded');m.layout()});
+  const si=document.getElementById('si'),tc=document.getElementById('tc'),em=document.getElementById('empty');
+  si.addEventListener('input',()=>{
+    const q=si.value.toLowerCase().trim();let v=0;
+    g.querySelectorAll('.card').forEach(c=>{
+      const t=c.querySelector('.title').textContent.toLowerCase()+c.querySelector('.tag').textContent.toLowerCase();
+      const s=!q||t.includes(q);c.style.display=s?'':'none';if(s)v++;
+    });
+    tc.textContent=v;em.style.display=v===0?'block':'none';m.layout();
+  });
+</script>
+</body></html>
