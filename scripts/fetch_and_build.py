@@ -179,7 +179,7 @@ def build_product_page(p):
   <a class="back" href="{SITE_URL}">← Back to gallery</a>
 </div></header>
 <main><div class="grid">
-  <div class="iw">{badge}<img src="{p['gh_image']}" alt="{p['title']}" width="600" height="600"></div>
+  <div class="iw">{badge}<a href="{p['url']}" target="_blank" rel="noopener sponsored"><img src="{p['gh_image']}" alt="{p['title']}" width="600" height="600"></a></div>
   <div class="info">
     <span class="cat">{p.get('category','Robotics & Tech')}</span>
     <h1>{p['title']}</h1>
