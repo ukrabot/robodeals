@@ -2,11 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>RoboDeals — Robotics & Tech Gadgets from AliExpress</title>
-  <meta name="description" content="Best robotics and tech gadgets from AliExpress. Arduino, drones, 3D printers, robot kits. Updated daily.">
+  <meta name="google-site-verification" content="54GYRlde4m8Ur5GgRiufdCeQpRr4LInzTweN8pmNO8s">
+  <title>Best Robotics & Tech Gadgets from AliExpress — RoboDeals</title>
+  <meta name="description" content="Discover the best robotics and tech gadgets from AliExpress. Arduino kits, robot arms, drones, 3D printers, ESP32, Raspberry Pi and more. Updated daily with affiliate deals.">
   <link rel="canonical" href="https://ukrabot.github.io/robodeals">
   <link rel="sitemap" type="application/xml" href="https://ukrabot.github.io/robodeals/sitemap.xml">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebSite",
+    "name":"RoboDeals","url":"https://ukrabot.github.io/robodeals",
+    "description":"Best robotics and tech gadgets from AliExpress. Updated daily.",
+    "potentialAction":{"@type":"SearchAction","target":"https://ukrabot.github.io/robodeals?q={search_term_string}","query-input":"required name=search_term_string"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"What is RoboDeals?","acceptedAnswer":{"@type":"Answer","text":"RoboDeals is a daily-updated gallery of the best robotics and tech gadgets available on AliExpress, with affiliate links and AI-generated descriptions."}},
+    {"@type":"Question","name":"Are these products from AliExpress?","acceptedAnswer":{"@type":"Answer","text":"Yes, all products link directly to AliExpress listings with affiliate tracking."}},
+    {"@type":"Question","name":"How often is RoboDeals updated?","acceptedAnswer":{"@type":"Answer","text":"RoboDeals is updated every day automatically with 100 new robotics and tech products."}},
+    {"@type":"Question","name":"What categories are available?","acceptedAnswer":{"@type":"Answer","text":"We cover Arduino, Raspberry Pi, ESP32, robot kits, drones, 3D printers, sensors, motors, smart home devices and more."}},
+    {"@type":"Question","name":"How do I find a specific product?","acceptedAnswer":{"@type":"Answer","text":"Use the search bar at the top of the page to filter products by keyword."}}
+  ]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://ukrabot.github.io/robodeals"}
+  ]}
+  </script>
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     :root{--bg:#0a0a0f;--surface:#13131a;--surface2:#1c1c27;--border:#2a2a3a;
@@ -51,6 +72,11 @@
     .price{font-family:'Space Mono',monospace;font-size:.88rem;font-weight:700;color:var(--accent)}
     .tag{font-size:.6rem;color:var(--muted);background:var(--surface2);border:1px solid var(--border);
           border-radius:20px;padding:2px 6px;font-family:'Space Mono',monospace;white-space:nowrap;overflow:hidden;max-width:90px;text-overflow:ellipsis}
+    .cats{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px;padding:0 16px}
+    .cats a{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--accent);
+             background:var(--surface2);border:1px solid var(--border);border-radius:20px;
+             padding:5px 14px;text-decoration:none;transition:all .2s;cursor:pointer}
+    .cats a:hover{background:var(--accent);color:#000;border-color:var(--accent)}
     .empty{text-align:center;padding:80px 20px;color:var(--muted);font-family:'Space Mono',monospace;display:none}
     footer{text-align:center;padding:32px 24px;border-top:1px solid var(--border);
             font-size:.72rem;color:var(--muted);font-family:'Space Mono',monospace;line-height:1.9}
@@ -65,19 +91,530 @@
     </svg>
     <input type="text" id="si" placeholder="Search robots, drones, Arduino…" autocomplete="off">
   </div>
-  <div class="upd">🔄 2026-05-19 18:05 UTC</div>
+  <div class="upd">🔄 2026-05-19 21:01 UTC</div>
 </div></header>
-<section class="hero">
-  <h1>Robotics &amp;<br>Tech Gadgets</h1>
-  <p>Top AliExpress affiliate deals, updated daily.</p>
+<section class="hero" itemscope itemtype="https://schema.org/WebPage">
+  <h1 itemprop="name">Best Robotics &amp; Tech Gadgets<br>from AliExpress</h1>
+  <p itemprop="description">Discover top-rated Arduino kits, robot arms, drones, ESP32 boards, Raspberry Pi accessories, 3D printers, sensors and smart home devices — all sourced from AliExpress with affiliate deals. Updated daily with 100 new products.</p>
   <div class="stats">
-    <div class="stat"><strong id="tc">758</strong>products</div>
+    <div class="stat"><strong id="tc">858</strong>products</div>
     <div class="stat"><strong>100</strong>added daily</div>
     <div class="stat"><strong>4–7%</strong>commission</div>
   </div>
+  <div class="cats">
+    <a href="javascript:void(0)" onclick="filterCat('arduino')">Arduino</a>
+    <a href="javascript:void(0)" onclick="filterCat('raspberry')">Raspberry Pi</a>
+    <a href="javascript:void(0)" onclick="filterCat('esp32')">ESP32</a>
+    <a href="javascript:void(0)" onclick="filterCat('robot')">Robots</a>
+    <a href="javascript:void(0)" onclick="filterCat('drone')">Drones</a>
+    <a href="javascript:void(0)" onclick="filterCat('sensor')">Sensors</a>
+    <a href="javascript:void(0)" onclick="filterCat('3d printer')">3D Printing</a>
+    <a href="javascript:void(0)" onclick="filterCat('motor')">Motors</a>
+    <a href="javascript:void(0)" onclick="filterCat('')">All</a>
+  </div>
 </section>
 <div class="gw">
-  <div class="grid" id="grid"><div class="grid-sizer"></div><a class="card" href="https://ukrabot.github.io/robodeals/p/5pcs-stem-educational-science-experiment-mechanical-robotic-1005012279209896.html"><span class="badge">−0%%</span>
+  <div class="grid" id="grid"><div class="grid-sizer"></div><a class="card" href="https://ukrabot.github.io/robodeals/p/shenstar-3d-printed-tpu-receiver-cover-for-iflight-protek25-1005002947295976.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005002947295976.jpg" alt="ShenStar 3D Printed TPU Receiver Cover for iFlight ProTek25 Pusher RC FPV Racing Drone Quadcopter Ai" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">ShenStar 3D Printed TPU Receiver Cover for iFlight ProTek25 Pusher RC FPV Racing Drone Quadcopter Ai</p>
+        <div class="bottom"><span class="price">$0.36</span><span class="tag">drone fpv</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/hotend-for-lab-a1-mini-assembly-hotend-kit-04-06-08mm-replac-1005009970995183.html"><span class="badge">−64%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009970995183.jpg" alt="Hotend For Lab A1 mini Assembly Hotend Kit 0.4 0.6 0.8MM Replaceable Nozzle 2510 Fan For 3D printer " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Hotend For Lab A1 mini Assembly Hotend Kit 0.4 0.6 0.8MM Replaceable Nozzle 2510 Fan For 3D printer </p>
+        <div class="bottom"><span class="price">$0.65</span><span class="tag">3d printer kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/powerful-processing-performance-safe-and-reliable-esp32-cam-1005009939379041.html"><span class="badge">−54%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009939379041.jpg" alt="Powerful Processing Performance, Safe and Reliable ESP32 CAM Development Board with OV2640 Module, W" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Powerful Processing Performance, Safe and Reliable ESP32 CAM Development Board with OV2640 Module, W</p>
+        <div class="bottom"><span class="price">$52.99</span><span class="tag">AI camera module</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/zigbee30-2mqtt-smart-button-scene-switch-wireless-remote-one-1005011834192907.html"><span class="badge">−50%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011834192907.jpg" alt="Zigbee3.0 2MQTT Smart Button Scene Switch Wireless Remote One Key Controller Smart Home Automation S" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Zigbee3.0 2MQTT Smart Button Scene Switch Wireless Remote One Key Controller Smart Home Automation S</p>
+        <div class="bottom"><span class="price">$62.81</span><span class="tag">smart home automation</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/zigbee-smart-push-button-wireless-scene-switch-home-automati-1005010635759875.html"><span class="badge">−53%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010635759875.jpg" alt="Zigbee Smart Push Button Wireless Scene Switch Home Automation Scenario Controller Battery Powered W" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Zigbee Smart Push Button Wireless Scene Switch Home Automation Scenario Controller Battery Powered W</p>
+        <div class="bottom"><span class="price">$45.76</span><span class="tag">smart home automation</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/16a-wifi-smart-mini-switch-no-wiring-rf433-remote-timer-sche-1005012072680646.html"><span class="badge">−51%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012072680646.jpg" alt="16A WiFi Smart Mini Switch No Wiring RF433 Remote, Timer Schedule 2 Way Control, Alexa Google Tuya A" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">16A WiFi Smart Mini Switch No Wiring RF433 Remote, Timer Schedule 2 Way Control, Alexa Google Tuya A</p>
+        <div class="bottom"><span class="price">$31.65</span><span class="tag">smart home automation</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/mgn7-mgn9-mgn12-mgn15-200-400-500-800mm-miniature-linear-rai-4000762343261.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/4000762343261.jpg" alt="MGN7 MGN9 MGN12 MGN15  200 400 500 800mm miniature linear rail slide 1pc MGN linear guide 1PC MGN Bl" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">MGN7 MGN9 MGN12 MGN15  200 400 500 800mm miniature linear rail slide 1pc MGN linear guide 1PC MGN Bl</p>
+        <div class="bottom"><span class="price">$3.71</span><span class="tag">cnc router kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1-10pcs-mg90s-micro-servo-motor-metal-gear-analog-rc-servomo-1005006295458844.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006295458844.jpg" alt="1-10PCS MG90S Micro Servo Motor Metal Gear Analog RC Servomotor 180 360 Degree  For Mini Car Airplan" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1-10PCS MG90S Micro Servo Motor Metal Gear Analog RC Servomotor 180 360 Degree  For Mini Car Airplan</p>
+        <div class="bottom"><span class="price">$2.53</span><span class="tag">servo motor robot</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/draw-wall-painting-robot-with-cable-plotter-for-arduino-robo-1005006668752734.html"><span class="badge">−25%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006668752734.jpg" alt="Draw Wall Painting Robot with Cable Plotter for Arduino Robot DIY Kit Polar Graph with Motor for UNO" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Draw Wall Painting Robot with Cable Plotter for Arduino Robot DIY Kit Polar Graph with Motor for UNO</p>
+        <div class="bottom"><span class="price">$323.19</span><span class="tag">bipedal robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-3639425766cm-closed-rubber-tracks-diy-tank-model-robot-1005002822065946.html"><span class="badge">−10%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005002822065946.jpg" alt="1PCS 36/39/42/57/66cm Closed Rubber Tracks DIY Tank Model Robot Toys Track Tire for RC Crawler Track" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1PCS 36/39/42/57/66cm Closed Rubber Tracks DIY Tank Model Robot Toys Track Tire for RC Crawler Track</p>
+        <div class="bottom"><span class="price">$1.34</span><span class="tag">tank robot chassis</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/3sets-hydraulic-mechanical-hand-robot-arm-wooden-stem-kit-ed-1005012275951390.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012275951390.jpg" alt="3Sets Hydraulic Mechanical Hand Robot Arm Wooden Stem Kit Educational Science Project Kids Robotics " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">3Sets Hydraulic Mechanical Hand Robot Arm Wooden Stem Kit Educational Science Project Kids Robotics </p>
+        <div class="bottom"><span class="price">$74.48</span><span class="tag">robot hand kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/flsun-v400-synchronous-timing-belt-500cm-3d-printer-accessor-1005005132616565.html"><span class="badge">−41%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005005132616565.jpg" alt="FLSUN V400 Synchronous Timing Belt 500CM 3d Printer Accessories 2GT 10mm Tooth Type Wide Drive Synch" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">FLSUN V400 Synchronous Timing Belt 500CM 3d Printer Accessories 2GT 10mm Tooth Type Wide Drive Synch</p>
+        <div class="bottom"><span class="price">$109.89</span><span class="tag">delta robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/round-peo-plate-for-flsun-v400-sr-pei-double-sided-magnetic-1005005565372329.html"><span class="badge">−4%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005005565372329.jpg" alt="Round PEO Plate For Flsun V400 SR pei Double Sided Magnetic Steel PEO Sheet 3D Printer Build Plate F" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Round PEO Plate For Flsun V400 SR pei Double Sided Magnetic Steel PEO Sheet 3D Printer Build Plate F</p>
+        <div class="bottom"><span class="price">$14.34</span><span class="tag">delta robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/lenovo-mini-camera-portable-waterproof-remote-monitoring-4k-1005011566264333.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011566264333.jpg" alt="Lenovo Mini Camera Portable Waterproof Remote Monitoring 4K HD WiFi IP AP New Camcorder Surveillance" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Lenovo Mini Camera Portable Waterproof Remote Monitoring 4K HD WiFi IP AP New Camcorder Surveillance</p>
+        <div class="bottom"><span class="price">$51.58</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/chegit-thumb-keychain-camera-096inch-mini-action-camera-retr-1005010568088960.html"><span class="badge">−53%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010568088960.jpg" alt="CHEGIT Thumb Keychain Camera 0.96inch Mini Action Camera Retro Support Memory Card 1080P Very Small " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">CHEGIT Thumb Keychain Camera 0.96inch Mini Action Camera Retro Support Memory Card 1080P Very Small </p>
+        <div class="bottom"><span class="price">$113.78</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/2026-a7-ip-camera-smart-outdoor-home-security-wifi-cctv-surv-1005011815659629.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011815659629.jpg" alt="2026 A7 IP Camera Smart Outdoor Home Security WIFI CCTV Surveillance with Color Night Vision Wireles" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">2026 A7 IP Camera Smart Outdoor Home Security WIFI CCTV Surveillance with Color Night Vision Wireles</p>
+        <div class="bottom"><span class="price">$108.83</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/original-sq11-sq12-sq23-mini-hd-camera-espia-small-action-dv-1005006399935391.html"><span class="badge">−10%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006399935391.jpg" alt="Original SQ11 SQ12 SQ23 Mini HD Camera Espia Small Action DV Camcorder Micro Body Sport Secret Gizli" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Original SQ11 SQ12 SQ23 Mini HD Camera Espia Small Action DV Camcorder Micro Body Sport Secret Gizli</p>
+        <div class="bottom"><span class="price">$16.78</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/mini-camera-1080p-hd-wifi-camcorder-diy-portable-wireless-mo-1005009131726434.html"><span class="badge">−34%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009131726434.jpg" alt="Mini Camera 1080P HD WiFi Camcorder DIY Portable Wireless Module Video Recorder Motion Detection P2P" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Mini Camera 1080P HD WiFi Camcorder DIY Portable Wireless Module Video Recorder Motion Detection P2P</p>
+        <div class="bottom"><span class="price">$11.54</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/mini-portable-remote-wifi-camera-small-compact-portable-surv-1005010353118385.html"><span class="badge">−50%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010353118385.jpg" alt="Mini Portable Remote WIFI Camera Small Compact Portable Surveillance Cam for Home Security" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Mini Portable Remote WIFI Camera Small Compact Portable Surveillance Cam for Home Security</p>
+        <div class="bottom"><span class="price">$112.03</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/mini-camera-1920x1080p-hd-video-recorder-infrared-night-visi-1005009739249113.html"><span class="badge">−57%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009739249113.jpg" alt="Mini Camera 1920x1080P HD Video Recorder Infrared Night Vision Motion Detection Support TF Card Up T" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Mini Camera 1920x1080P HD Video Recorder Infrared Night Vision Motion Detection Support TF Card Up T</p>
+        <div class="bottom"><span class="price">$93.95</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1080p-mini-camera-module-hd-diy-wifi-camera-video-recorder-m-1005010760913009.html"><span class="badge">−54%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010760913009.jpg" alt="1080P Mini Camera Module HD DIY WiFi Camera Video Recorder Motion Detection Home Security Surveillan" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1080P Mini Camera Module HD DIY WiFi Camera Video Recorder Motion Detection Home Security Surveillan</p>
+        <div class="bottom"><span class="price">$102.43</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/m8-hd-1080p-mini-camera-portable-small-digital-video-recorde-1005007989476199.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007989476199.jpg" alt="M8 HD 1080P Mini Camera Portable Small Digital Video Recorder Police Body Cam  Infrared Night Vision" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">M8 HD 1080P Mini Camera Portable Small Digital Video Recorder Police Body Cam  Infrared Night Vision</p>
+        <div class="bottom"><span class="price">$31.42</span><span class="tag">scara robot kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/7-pixel-game-console-kits-puzzle-pixel-game-console-51-singl-1005009084167486.html"><span class="badge">−2%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009084167486.jpg" alt="7 Pixel Game Console Kits Puzzle Pixel Game Console 51 Single-chip DIY Welding Practice Parts Electr" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">7 Pixel Game Console Kits Puzzle Pixel Game Console 51 Single-chip DIY Welding Practice Parts Electr</p>
+        <div class="bottom"><span class="price">$8.96</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1-10pcs-pca9685-robot-controller-iic-interface-16-channel-12-1005010267049791.html"><span class="badge">−53%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010267049791.jpg" alt="1-10PCS PCA9685 Robot Controller IIC Interface 16 Channel 12-Bit PWM Servo Motor Driver Board for Ar" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1-10PCS PCA9685 Robot Controller IIC Interface 16 Channel 12-Bit PWM Servo Motor Driver Board for Ar</p>
+        <div class="bottom"><span class="price">$32.39</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/childrens-intelligent-ai-robot-dog-diy-assembly-voice-scienc-1005012098704997.html"><span class="badge">−50%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012098704997.jpg" alt="Children's Intelligent AI Robot Dog DIY Assembly Voice Science Experiment Kit Electronic Toy Dog Edu" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Children's Intelligent AI Robot Dog DIY Assembly Voice Science Experiment Kit Electronic Toy Dog Edu</p>
+        <div class="bottom"><span class="price">$91.06</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/green-robot-dog-building-blocks-kit-sci-fi-alien-pet-figure-1005011736850516.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011736850516.jpg" alt="Green Robot Dog Building Blocks Kit, Sci-Fi Alien Pet Figure Model, Collectible DIY Desktop Display " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Green Robot Dog Building Blocks Kit, Sci-Fi Alien Pet Figure Model, Collectible DIY Desktop Display </p>
+        <div class="bottom"><span class="price">$65.49</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/135-scale-diecast-resin-figure-model-kit-wwii-us-infantry-2-1005009801118834.html"><span class="badge">−48%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009801118834.jpg" alt="1/35 Scale Diecast Resin Figure Model Kit WWII US Infantry 2 Figures with Dog Need To Be Assembled a" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1/35 Scale Diecast Resin Figure Model Kit WWII US Infantry 2 Figures with Dog Need To Be Assembled a</p>
+        <div class="bottom"><span class="price">$7.22</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/rc-robot-childrens-remote-control-mechanical-dog-toy-science-1005010144923765.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010144923765.jpg" alt="Rc Robot Children's Remote Control Mechanical Dog Toy Science Teaching Diy Assembling Model Electric" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Rc Robot Children's Remote Control Mechanical Dog Toy Science Teaching Diy Assembling Model Electric</p>
+        <div class="bottom"><span class="price">$84.93</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/rc-robot-childrens-remote-control-mechanical-dog-toy-science-1005008577016032.html"><span class="badge">−51%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008577016032.jpg" alt="Rc Robot Children's Remote Control Mechanical Dog Toy Science Teaching Diy Assembling Model Electric" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Rc Robot Children's Remote Control Mechanical Dog Toy Science Teaching Diy Assembling Model Electric</p>
+        <div class="bottom"><span class="price">$86.54</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/kids-remote-control-electric-mechanical-dog-toy-diy-assembly-1005010080545408.html"><span class="badge">−19%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010080545408.jpg" alt="Kids Remote Control Electric Mechanical Dog Toy DIY Assembly Intelligent Technology Robot Dog Puzzle" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Kids Remote Control Electric Mechanical Dog Toy DIY Assembly Intelligent Technology Robot Dog Puzzle</p>
+        <div class="bottom"><span class="price">$45.25</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/diy-ultrasonic-ranging-obstacle-avoidance-car-electronic-kit-1005007301861888.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007301861888.jpg" alt="DIY Ultrasonic Ranging Obstacle Avoidance Car Electronic Kit LED Display Programming Intelligent Car" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">DIY Ultrasonic Ranging Obstacle Avoidance Car Electronic Kit LED Display Programming Intelligent Car</p>
+        <div class="bottom"><span class="price">$57.99</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/dc-45-6v-ultrasonic-distance-measurer-module-soldering-pract-1005009683177713.html"><span class="badge">−57%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009683177713.jpg" alt="DC 4.5-6V Ultrasonic Distance Measurer Module Soldering Practice Kit With LED Lights DIY Kit Ultraso" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">DC 4.5-6V Ultrasonic Distance Measurer Module Soldering Practice Kit With LED Lights DIY Kit Ultraso</p>
+        <div class="bottom"><span class="price">$48.84</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/electronic-smart-car-kit-4wd-smart-robot-car-chassis-kits-ca-1005009815972775.html"><span class="badge">−57%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009815972775.jpg" alt="Electronic Smart Car Kit 4WD Smart Robot Car Chassis Kits Car With Speed Encoder and Battery Box Diy" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Electronic Smart Car Kit 4WD Smart Robot Car Chassis Kits Car With Speed Encoder and Battery Box Diy</p>
+        <div class="bottom"><span class="price">$75.40</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/diy-robot-childrens-remote-control-mechanical-dog-toy-scienc-1005011971186875.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011971186875.jpg" alt="DIY Robot Children's Remote Control Mechanical Dog Toy Science Teaching Diy Assembling Model Electri" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">DIY Robot Children's Remote Control Mechanical Dog Toy Science Teaching Diy Assembling Model Electri</p>
+        <div class="bottom"><span class="price">$95.53</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/alien-robot-dog-creative-model-building-blocks-kit-toys-coll-1005010188599579.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010188599579.jpg" alt="Alien Robot Dog Creative Model Building Blocks Kit Toys Collection Ornaments for Enthusiasts & Child" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Alien Robot Dog Creative Model Building Blocks Kit Toys Collection Ornaments for Enthusiasts & Child</p>
+        <div class="bottom"><span class="price">$62.07</span><span class="tag">robot dog kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/diy-wheel-robot-tire-tt-motor-robot-smart-intelligent-car-pl-1005005753451816.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005005753451816.jpg" alt="DIY Wheel Robot Tire TT Motor Robot Smart Intelligent Car Platform Car Electronic Design Toy 521" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">DIY Wheel Robot Tire TT Motor Robot Smart Intelligent Car Platform Car Electronic Design Toy 521</p>
+        <div class="bottom"><span class="price">$1.43</span><span class="tag">robot chassis kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/smart-electronics-integrated-circuit-joystick-shield-v12-for-1005006466958888.html"><span class="badge">−68%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006466958888.jpg" alt="Smart Electronics Integrated Circuit Joystick Shield V1.2 for arduino Diy Kit" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Smart Electronics Integrated Circuit Joystick Shield V1.2 for arduino Diy Kit</p>
+        <div class="bottom"><span class="price">$28.99</span><span class="tag">robot chassis kit</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/90-dc-9v-battery-button-power-plug-for-arduino-mega-2560-128-32554585498.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/32554585498.jpg" alt="90 DC 9V Battery button power plug for Arduino Mega 2560 1280 UNO R3 132 9V battery buckle" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">90 DC 9V Battery button power plug for Arduino Mega 2560 1280 UNO R3 132 9V battery buckle</p>
+        <div class="bottom"><span class="price">$0.55</span><span class="tag">arduino mega</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/hot-sale-smart-electronics-ds1302-real-time-clock-module-for-1005009468898897.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009468898897.jpg" alt="Hot Sale Smart Electronics DS1302 Real Time Clock Module for arduino UNO MEGA Development Board Diy " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Hot Sale Smart Electronics DS1302 Real Time Clock Module for arduino UNO MEGA Development Board Diy </p>
+        <div class="bottom"><span class="price">$1.43</span><span class="tag">arduino mega</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005010019045981.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010019045981.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic</p>
+        <div class="bottom"><span class="price">$0.92</span><span class="tag">arduino mega</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1510pcs-t-type-i-type-9v-dc-battery-power-cable-plug-clip-ba-1005010455695941.html"><span class="badge">−2%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010455695941.jpg" alt="1/5/10pcs T Type I Type 9V DC Battery Power Cable Plug Clip Barrel Jack Connector for Arduino Uno r3" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1/5/10pcs T Type I Type 9V DC Battery Power Cable Plug Clip Barrel Jack Connector for Arduino Uno r3</p>
+        <div class="bottom"><span class="price">$1.93</span><span class="tag">arduino mega</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/mini-4-channel-motor-drive-shield-expansion-board-l293d-modu-1005009373530341.html"><span class="badge">−11%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009373530341.jpg" alt="Mini 4-Channel Motor Drive Shield Expansion Board L293D Module High Voltage Current Module for Ardui" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Mini 4-Channel Motor Drive Shield Expansion Board L293D Module High Voltage Current Module for Ardui</p>
+        <div class="bottom"><span class="price">$4.27</span><span class="tag">arduino mega</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/tzt-13pcs-mini-4-channel-motor-drive-shield-l293d-expansion-1005008844807680.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008844807680.jpg" alt="TZT 1/3PCS Mini 4-Channel Motor Drive Shield L293D Expansion Board Module High Voltage Current For A" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">TZT 1/3PCS Mini 4-Channel Motor Drive Shield L293D Expansion Board Module High Voltage Current For A</p>
+        <div class="bottom"><span class="price">$1.11</span><span class="tag">arduino mega</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/nano-v30-30-controller-terminal-adapter-expansion-board-simp-1005012212216363.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012212216363.jpg" alt="NANO V3.0 3.0 Controller Terminal Adapter Expansion Board Simple Extension Plate For Arduino AVR ATM" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">NANO V3.0 3.0 Controller Terminal Adapter Expansion Board Simple Extension Plate For Arduino AVR ATM</p>
+        <div class="bottom"><span class="price">$4.48</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-for-nano-mini-type-c-micro-usb-with-the-bootloader-comp-1005008525562597.html"><span class="badge">−16%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008525562597.jpg" alt="1PCS For nano Mini  Type-C  Micro USB With The Bootloader Compatible Red Controller for Arduino CH34" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1PCS For nano Mini  Type-C  Micro USB With The Bootloader Compatible Red Controller for Arduino CH34</p>
+        <div class="bottom"><span class="price">$0.46</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-new-original-tps53603adrg-tps53603-high-quality-arduino-1005008389249058.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008389249058.jpg" alt="1Pcs New Original TPS53603ADRG TPS53603 High Quality Arduino Nano Breadboard" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1Pcs New Original TPS53603ADRG TPS53603 High Quality Arduino Nano Breadboard</p>
+        <div class="bottom"><span class="price">$0.40</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/greatzt-12pcs-30cm-usb-cable-for-arduino-nano-30-usb-to-mini-1005008141054815.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008141054815.jpg" alt="GREATZT 1/2PCS 30cm USB Cable for arduino Nano 3.0 USB to mini USB for arduino" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">GREATZT 1/2PCS 30cm USB Cable for arduino Nano 3.0 USB to mini USB for arduino</p>
+        <div class="bottom"><span class="price">$0.86</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1-20pcs-ky-021-mini-magnetic-reed-switch-sensor-module-dry-r-1005010211450918.html"><span class="badge">−25%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010211450918.jpg" alt="1-20Pcs KY-021 Mini Magnetic Reed Switch Sensor Module Dry Reed Pipe Switch Induction For Arduino Na" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1-20Pcs KY-021 Mini Magnetic Reed Switch Sensor Module Dry Reed Pipe Switch Induction For Arduino Na</p>
+        <div class="bottom"><span class="price">$0.42</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/10pcslot-new-100-original-74hc238pw-tssop-16-74hc238-74hc-hc-1005008408218228.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008408218228.jpg" alt="10Pcs/Lot New 100% Original 74HC238PW TSSOP-16 74HC238 74HC HC238 Arduino Nano Integrated Circuits S" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">10Pcs/Lot New 100% Original 74HC238PW TSSOP-16 74HC238 74HC HC238 Arduino Nano Integrated Circuits S</p>
+        <div class="bottom"><span class="price">$0.13</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/diytzt-13pcs-30cm-usb-cable-for-arduino-nano-30-usb-to-mini-1005009382539553.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009382539553.jpg" alt="DIYTZT 1/3PCS 30cm USB cable for Arduino Nano 3.0 USB To MINI USB for Arduino" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">DIYTZT 1/3PCS 30cm USB cable for Arduino Nano 3.0 USB To MINI USB for Arduino</p>
+        <div class="bottom"><span class="price">$0.92</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/seeeduino-seeed-v42-for-arduino-nano-atmega328p-avr-8-bit-mi-1005001368879759.html"><span class="badge">−25%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005001368879759.jpg" alt="Seeeduino Seeed V4.2 For Arduino Nano Atmega328P AVR 8 Bit Microcontroller MCU Development Board Mod" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Seeeduino Seeed V4.2 For Arduino Nano Atmega328P AVR 8 Bit Microcontroller MCU Development Board Mod</p>
+        <div class="bottom"><span class="price">$0.31</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1-pcs-new-100-original-tps62150rgtr-arduino-nano-integrated-1005008407933464.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008407933464.jpg" alt="1 pcs New 100% Original TPS62150RGTR Arduino Nano Integrated Circuits Operational Amplifier Single C" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1 pcs New 100% Original TPS62150RGTR Arduino Nano Integrated Circuits Operational Amplifier Single C</p>
+        <div class="bottom"><span class="price">$0.17</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/10pc1pc-seeeduino-xiao-samd21g18-samd21-nano-seeed-cortex-m0-1005002094359756.html"><span class="badge">−25%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005002094359756.jpg" alt="10Pc/1pc Seeeduino XIAO SAMD21G18 SAMD21 Nano Seeed Cortex M0 32 Bit Microcontroller Development Boa" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">10Pc/1pc Seeeduino XIAO SAMD21G18 SAMD21 Nano Seeed Cortex M0 32 Bit Microcontroller Development Boa</p>
+        <div class="bottom"><span class="price">$0.20</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1-pcs-new-100-original-tja1044t118-arduino-nano-integrated-c-1005008408550726.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008408550726.jpg" alt="1 pcs New 100% Original TJA1044T,118 Arduino Nano Integrated Circuits Operational Amplifier Single C" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1 pcs New 100% Original TJA1044T,118 Arduino Nano Integrated Circuits Operational Amplifier Single C</p>
+        <div class="bottom"><span class="price">$0.28</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/promotion-for-arduino-nano-30-atmega328-controller-compatibl-1005009010132221.html"><span class="badge">−66%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009010132221.jpg" alt="Promotion For arduino Nano 3.0 Atmega328 Controller Compatible Board Module PCB Development Board wi" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Promotion For arduino Nano 3.0 Atmega328 Controller Compatible Board Module PCB Development Board wi</p>
+        <div class="bottom"><span class="price">$1.29</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/atmega328p-usb-nano-v30-nano-controller-with-compatible-2014-1005012081769171.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012081769171.jpg" alt="ATMEGA328P USB Nano V3.0 Nano controller with compatible 2014 version programme for arduino driver" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">ATMEGA328P USB Nano V3.0 Nano controller with compatible 2014 version programme for arduino driver</p>
+        <div class="bottom"><span class="price">$1.42</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/10pcs1pc-seeed-studio-xiao-ble-nrf52840-sense-plus-seeeduino-1005004459618789.html"><span class="badge">−25%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005004459618789.jpg" alt="10Pcs/1pc Seeed Studio XIAO BLE nRF52840 SENSE Plus Seeeduino XIAO RP2040 Bluetooth-co Module For Ar" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">10Pcs/1pc Seeed Studio XIAO BLE nRF52840 SENSE Plus Seeeduino XIAO RP2040 Bluetooth-co Module For Ar</p>
+        <div class="bottom"><span class="price">$0.15</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/13pcs-30cm-usb-cable-for-arduino-nano-30-usb-to-mini-usb-for-1005009234932641.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009234932641.jpg" alt="1/3PCS 30cm USB Cable for arduino Nano 3.0 USB to mini USB for arduino" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1/3PCS 30cm USB Cable for arduino Nano 3.0 USB to mini USB for arduino</p>
+        <div class="bottom"><span class="price">$0.92</span><span class="tag">arduino nano</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3-for-nanomega-2560-leonardopro-micr-1005009122348788.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009122348788.jpg" alt="30cm USB Cable for Uno r3 For Nano/MEGA 2560 Leonardo/Pro micro/DUE Blue Quality A type USB/Mini USB" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable for Uno r3 For Nano/MEGA 2560 Leonardo/Pro micro/DUE Blue Quality A type USB/Mini USB</p>
+        <div class="bottom"><span class="price">$0.67</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005008090729649.html"><span class="badge">−65%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008090729649.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini/Micro/T" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini/Micro/T</p>
+        <div class="bottom"><span class="price">$20.20</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005005035250005.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005005035250005.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type-C /Mini USB/Micr" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type-C /Mini USB/Micr</p>
+        <div class="bottom"><span class="price">$1.22</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005007823509661.html"><span class="badge">−50%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007823509661.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic</p>
+        <div class="bottom"><span class="price">$20.45</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005012086971098.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012086971098.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic</p>
+        <div class="bottom"><span class="price">$0.92</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3-for-nanomega-2560leonardopro-micro-1005007485115660.html"><span class="badge">−1%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007485115660.jpg" alt="30cm USB Cable For Uno r3 For Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue  Quality A type USB/Mini US" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable For Uno r3 For Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue  Quality A type USB/Mini US</p>
+        <div class="bottom"><span class="price">$8.87</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomega-2560leonardopro-microdue-b-1005006368096504.html"><span class="badge">−50%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006368096504.jpg" alt="30cm USB Cable for Uno r3/Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue High Quality A type USB/Mini US" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable for Uno r3/Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue High Quality A type USB/Mini US</p>
+        <div class="bottom"><span class="price">$18.96</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005008090641914.html"><span class="badge">−65%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008090641914.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic</p>
+        <div class="bottom"><span class="price">$20.60</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomega-2560leonardopro-microdue-b-1005006471384955.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006471384955.jpg" alt="30cm USB Cable for Uno R3/Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue High Quality A type USB/Mini US" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable for Uno R3/Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue High Quality A type USB/Mini US</p>
+        <div class="bottom"><span class="price">$7.58</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomega-2560leonardopro-microdue-b-4001221371378.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/4001221371378.jpg" alt="30cm USB Cable for Uno r3/Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue High Quality A type USB/Mini US" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable for Uno r3/Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue High Quality A type USB/Mini US</p>
+        <div class="bottom"><span class="price">$0.22</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3-for-nanomega-2560-leonardopro-micr-1005005915929959.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005005915929959.jpg" alt="30cm USB Cable for Uno r3 For Nano/MEGA 2560 Leonardo/Pro micro/DUE Blue Quality A type USB/Mini USB" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable for Uno r3 For Nano/MEGA 2560 Leonardo/Pro micro/DUE Blue Quality A type USB/Mini USB</p>
+        <div class="bottom"><span class="price">$11.32</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/tzt-pro-mini-atmega32u4-5v-16mhz-original-chip-replace-atmeg-1005007109304613.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007109304613.jpg" alt="TZT Pro mini ATmega32U4 5V 16MHz Original Chip Replace ATmega328 For Arduino Pro Mini With 2 Row Pin" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">TZT Pro mini ATmega32U4 5V 16MHz Original Chip Replace ATmega328 For Arduino Pro Mini With 2 Row Pin</p>
+        <div class="bottom"><span class="price">$1.79</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/pro-micro-atmega32u4-5v-16mhz-original-chip-replace-atmega32-1005006426010899.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006426010899.jpg" alt="Pro Micro ATmega32U4 5V 16MHz Original Chip Replace ATmega328 For Arduino Pro Mini With 2 Row Pin He" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Pro Micro ATmega32U4 5V 16MHz Original Chip Replace ATmega328 For Arduino Pro Mini With 2 Row Pin He</p>
+        <div class="bottom"><span class="price">$5.60</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/diytzt-124pcs-30cm-164ft-usb-cable-for-leonardopro-microdue-1005011592489280.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011592489280.jpg" alt="DIYTZT 1/2/4PCS 30cm 1.64FT USB Cable for Leonardo/Pro micro/DUE High Quality A type Micro USB 0.3m " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">DIYTZT 1/2/4PCS 30cm 1.64FT USB Cable for Leonardo/Pro micro/DUE High Quality A type Micro USB 0.3m </p>
+        <div class="bottom"><span class="price">$0.92</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005006053155518.html"><span class="badge">−50%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005006053155518.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic</p>
+        <div class="bottom"><span class="price">$19.92</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005011557285641.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011557285641.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini USB/Mic</p>
+        <div class="bottom"><span class="price">$0.92</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3-for-nanomega-2560leonardopro-micro-1005010572505369.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010572505369.jpg" alt="30cm USB Cable For Uno r3 For Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue  Quality A type USB/Mini US" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30cm USB Cable For Uno r3 For Nano/MEGA 2560/Leonardo/Pro micro/DUE Blue  Quality A type USB/Mini US</p>
+        <div class="bottom"><span class="price">$0.57</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/18-inch-tft-lcd-display-module-lcd-shield-adapter-board-expa-1005003267922525.html"><span class="badge">−53%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005003267922525.jpg" alt="1.8 inch TFT LCD Display Module LCD Shield Adapter Board Expansion Board for Arduino R3 Leonardo R3 " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1.8 inch TFT LCD Display Module LCD Shield Adapter Board Expansion Board for Arduino R3 Leonardo R3 </p>
+        <div class="bottom"><span class="price">$0.87</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/30cm-usb-cable-for-uno-r3nanomegaleonardopro-microdue-blue-h-1005008490361792.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008490361792.jpg" alt="30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini/Micro/T" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">30CM USB Cable for Uno R3/Nano/MEGA/Leonardo/Pro Micro/DUE Blue High Quality A Type USB/Mini/Micro/T</p>
+        <div class="bottom"><span class="price">$4.57</span><span class="tag">arduino leonardo</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/tzt-13pcs-lgt8f328p-lqfp32-minievb-33v-5v-replaces-pro-mini-1005008419591670.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008419591670.jpg" alt="TZT 1/3PCS LGT8F328P LQFP32 MiniEVB 3.3V / 5V Replaces Pro Mini ATMEGA328P Fully Compatible For Ardu" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">TZT 1/3PCS LGT8F328P LQFP32 MiniEVB 3.3V / 5V Replaces Pro Mini ATMEGA328P Fully Compatible For Ardu</p>
+        <div class="bottom"><span class="price">$1.12</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/t232rl-ft232-ftdi-usb-33v-55v-to-ttl-serial-adapter-module-f-1005010143168856.html"><span class="badge">−25%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010143168856.jpg" alt="T232RL FT232 FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini Port USB TO " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">T232RL FT232 FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini Port USB TO </p>
+        <div class="bottom"><span class="price">$0.75</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/tzt-13pcs-ch340n-sop8-usb-to-ttl-module-pro-mini-downloader-1005011922152241.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011922152241.jpg" alt="TZT 1/3PCS CH340N SOP8 USB to TTL Module Pro Mini Downloader Replaces CH340G CH340E CH340C CH9340 Fo" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">TZT 1/3PCS CH340N SOP8 USB to TTL Module Pro Mini Downloader Replaces CH340G CH340E CH340C CH9340 Fo</p>
+        <div class="bottom"><span class="price">$0.93</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/ft232rl-ftdi-usb-33v-55v-to-ttl-serial-adapter-module-for-ar-1005004301305355.html"><span class="badge">−52%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005004301305355.jpg" alt="FT232RL FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini USB TO TTL 232" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">FT232RL FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini USB TO TTL 232</p>
+        <div class="bottom"><span class="price">$0.68</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/ch340n-sop8-usb-to-ttl-module-pro-mini-downloader-replaces-c-1005009265080438.html"><span class="badge">−66%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009265080438.jpg" alt="CH340N SOP8 USB to TTL Module Pro Mini Downloader Replaces CH340G CH340E CH340C CH9340 For Arduino E" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">CH340N SOP8 USB to TTL Module Pro Mini Downloader Replaces CH340G CH340E CH340C CH9340 For Arduino E</p>
+        <div class="bottom"><span class="price">$4.45</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/8x32-led-i2c-dot-matrix-module-832-788asabawagagg-5-color-ht-1005007922153877.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007922153877.jpg" alt="8x32 Led I2C Dot Matrix Module 8*32 788AS/AB/AW/AG/AGG 5 Color HT16K33/HT16K33A SOP20 SOP24 SOP28 fo" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">8x32 Led I2C Dot Matrix Module 8*32 788AS/AB/AW/AG/AGG 5 Color HT16K33/HT16K33A SOP20 SOP24 SOP28 fo</p>
+        <div class="bottom"><span class="price">$2.54</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/ft232rl-ftdi-usb-33v-55v-to-ttl-serial-adapter-module-for-ar-1005009690038161.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009690038161.jpg" alt="FT232RL FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini USB TO TTL 232" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">FT232RL FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini USB TO TTL 232</p>
+        <div class="bottom"><span class="price">$0.91</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/13pcs-ft232rl-ftdi-usb-33v-55v-to-ttl-serial-adapter-module-1005003446311599.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005003446311599.jpg" alt="1/3pcs FT232RL FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini USB TO TTL" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1/3pcs FT232RL FTDI USB 3.3V 5.5V to TTL Serial Adapter Module for Arduino FT232 Pro Mini USB TO TTL</p>
+        <div class="bottom"><span class="price">$1.21</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/lgt8f328p-ssop20-minievb-replaces-arduino-pro-mini-atmeag328-1005011768689014.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005011768689014.jpg" alt="LGT8F328P SSOP20 MiniEVB Replaces Arduino Pro Mini ATMeag328P  Fully Compatible" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">LGT8F328P SSOP20 MiniEVB Replaces Arduino Pro Mini ATMeag328P  Fully Compatible</p>
+        <div class="bottom"><span class="price">$6.18</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/13pcs-ft232rl-ftdi-usb-33v-55v-to-ttl-serial-adapter-module-1005008603314196.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008603314196.jpg" alt="1/3PCS FT232RL FTDI USB 3.3V 5.5V to TTL serial adapter module for Arduino FT232 Pro Mini USB to TTL" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1/3PCS FT232RL FTDI USB 3.3V 5.5V to TTL serial adapter module for Arduino FT232 Pro Mini USB to TTL</p>
+        <div class="bottom"><span class="price">$1.21</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/8x16-led-i2c-dot-matrix-module-816-788asabawagagg-5-color-ht-1005009549420013.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009549420013.jpg" alt="8x16 Led I2C Dot Matrix Module 8*16 788AS/AB/AW/AG/AGG 5 Color HT16K33/HT16K33A SOP20 SOP24 SOP28 fo" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">8x16 Led I2C Dot Matrix Module 8*16 788AS/AB/AW/AG/AGG 5 Color HT16K33/HT16K33A SOP20 SOP24 SOP28 fo</p>
+        <div class="bottom"><span class="price">$2.90</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/pro-mini-atmega328p-pro-mini-328-mini-atmega328-33v-5v-for-a-1005008182116267.html"><span class="badge">−41%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008182116267.jpg" alt="Pro mini Atmega328P Pro Mini 328 Mini ATMEGA328 3.3V 5V for Arduino USB to TTL CP2102 FT232RL CH340G" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Pro mini Atmega328P Pro Mini 328 Mini ATMEGA328 3.3V 5V for Arduino USB to TTL CP2102 FT232RL CH340G</p>
+        <div class="bottom"><span class="price">$0.49</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/ch340n-usb-to-ttl-serial-converter-module-33v5v-for-arduino-1005009969175917.html"><span class="badge">−32%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009969175917.jpg" alt="CH340N USB to TTL Serial Converter Module 3.3V/5V for Arduino Pro Mini ESP8266 Programming" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">CH340N USB to TTL Serial Converter Module 3.3V/5V for Arduino Pro Mini ESP8266 Programming</p>
+        <div class="bottom"><span class="price">$0.59</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-pro-mini-series-pro-mini-atmega328p-motherboard-5v-atme-1005008201641005.html"><span class="badge">−34%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008201641005.jpg" alt="1PCS Pro Mini Series Pro mini Atmega328P Motherboard 5V ATMEGA328 Motherboard 3.3V for Arduino Compa" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1PCS Pro Mini Series Pro mini Atmega328P Motherboard 5V ATMEGA328 Motherboard 3.3V for Arduino Compa</p>
+        <div class="bottom"><span class="price">$0.65</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/12pcs-lgt8f328p-lqfp32-minievb-33v-5v-replaces-pro-mini-atme-1005008196910469.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005008196910469.jpg" alt="1/2PCS LGT8F328P LQFP32 MiniEVB 3.3V / 5V Replaces Pro Mini ATMEGA328P Fully Compatible For Arduino " loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1/2PCS LGT8F328P LQFP32 MiniEVB 3.3V / 5V Replaces Pro Mini ATMEGA328P Fully Compatible For Arduino </p>
+        <div class="bottom"><span class="price">$1.07</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/wavgat-for-wemos-ch340g-breakout-5v-33v-usb-to-serial-module-1005007966315685.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007966315685.jpg" alt="WAVGAT For WEMOS CH340G Breakout 5V 3.3V USB to serial module switch for arduino downloader pro mini" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">WAVGAT For WEMOS CH340G Breakout 5V 3.3V USB to serial module switch for arduino downloader pro mini</p>
+        <div class="bottom"><span class="price">$0.69</span><span class="tag">arduino pro mini</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/tzt-135pcs-ky-019-5v-one-1-channel-relay-module-board-shield-1005007402832976.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007402832976.jpg" alt="TZT 1/3/5PCS KY-019 5V One 1 Channel Relay Module Board Shield For PIC AVR DSP ARM for arduino Relay" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">TZT 1/3/5PCS KY-019 5V One 1 Channel Relay Module Board Shield For PIC AVR DSP ARM for arduino Relay</p>
+        <div class="bottom"><span class="price">$0.95</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/greatzt-micro-sd-storage-expansion-board-micro-sd-tf-card-me-1005007924762612.html"><span class="badge">−14%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005007924762612.jpg" alt="GREATZT Micro SD Storage Expansion Board Micro SD TF Card Memory Shield Module SPI For Arduino Promo" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">GREATZT Micro SD Storage Expansion Board Micro SD TF Card Memory Shield Module SPI For Arduino Promo</p>
+        <div class="bottom"><span class="price">$0.75</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-micro-sd-storage-expansion-board-mini-micro-sd-tf-card-1005010080277625.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005010080277625.jpg" alt="（1pcs ）Micro SD Storage Expansion Board  Mini Micro SD TF Card Memory Shield Module With Pins for Ar" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">（1pcs ）Micro SD Storage Expansion Board  Mini Micro SD TF Card Memory Shield Module With Pins for Ar</p>
+        <div class="bottom"><span class="price">$2.06</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/micro-mini-sd-storage-expansion-board-mini-micro-sd-tf-card-1005005917375801.html"><span class="badge">−1%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005005917375801.jpg" alt="Micro Mini SD Storage Expansion Board Mini Micro SD TF Card Memory Shield Module for Arduino" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">Micro Mini SD Storage Expansion Board Mini Micro SD TF Card Memory Shield Module for Arduino</p>
+        <div class="bottom"><span class="price">$0.18</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/tzt-135pcs-micro-sd-storage-expansion-board-micro-sd-tf-card-1005009206376244.html"><span class="badge">−8%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009206376244.jpg" alt="TZT 1/3/5PCS Micro SD Storage Expansion Board Micro SD TF Card Memory Shield Module SPI For Arduino" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">TZT 1/3/5PCS Micro SD Storage Expansion Board Micro SD TF Card Memory Shield Module SPI For Arduino</p>
+        <div class="bottom"><span class="price">$0.77</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-micro-sd-storage-expansion-board-mini-micro-sd-tf-card-1005009554776070.html"><span class="badge">−0%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009554776070.jpg" alt="1Pcs Micro SD Storage Expansion Board Mini Micro SD TF Card Memory Shield Module With Pins for Ardui" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1Pcs Micro SD Storage Expansion Board Mini Micro SD TF Card Memory Shield Module With Pins for Ardui</p>
+        <div class="bottom"><span class="price">$0.20</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/1pcs-micro-sd-storage-expansion-board-mini-micro-sd-tf-card-1005009893771795.html"><span class="badge">−5%%</span>
+      <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005009893771795.jpg" alt="1Pcs Micro SD Storage Expansion Board Mini Micro SD TF Card Memory Shield Module With Pins for Ardui" loading="lazy" onerror="this.closest('.card').remove()"></div>
+      <div class="info"><p class="title">1Pcs Micro SD Storage Expansion Board Mini Micro SD TF Card Memory Shield Module With Pins for Ardui</p>
+        <div class="bottom"><span class="price">$0.39</span><span class="tag">arduino shield</span></div>
+      </div></a>
+<a class="card" href="https://ukrabot.github.io/robodeals/p/5pcs-stem-educational-science-experiment-mechanical-robotic-1005012279209896.html"><span class="badge">−0%%</span>
       <div class="iw"><img src="https://raw.githubusercontent.com/ukrabot/robodeals-img/main/p/1005012279209896.jpg" alt="5Pcs Stem Educational Science Experiment Mechanical Robotic Arm Hand Assembly Grabber Engineering Ki" loading="lazy" onerror="this.closest('.card').remove()"></div>
       <div class="info"><p class="title">5Pcs Stem Educational Science Experiment Mechanical Robotic Arm Hand Assembly Grabber Engineering Ki</p>
         <div class="bottom"><span class="price">$107.46</span><span class="tag">robot hand kit</span></div>
