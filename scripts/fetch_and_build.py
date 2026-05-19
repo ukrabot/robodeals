@@ -297,11 +297,32 @@ def build_index(products):
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>RoboDeals — Robotics & Tech Gadgets from AliExpress</title>
-  <meta name="description" content="Best robotics and tech gadgets from AliExpress. Arduino, drones, 3D printers, robot kits. Updated daily.">
+  <meta name="google-site-verification" content="54GYRlde4m8Ur5GgRiufdCeQpRr4LInzTweN8pmNO8s">
+  <title>Best Robotics & Tech Gadgets from AliExpress — RoboDeals</title>
+  <meta name="description" content="Discover the best robotics and tech gadgets from AliExpress. Arduino kits, robot arms, drones, 3D printers, ESP32, Raspberry Pi and more. Updated daily with affiliate deals.">
   <link rel="canonical" href="{SITE_URL}">
   <link rel="sitemap" type="application/xml" href="{SITE_URL}/sitemap.xml">
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"WebSite",
+    "name":"RoboDeals","url":"{SITE_URL}",
+    "description":"Best robotics and tech gadgets from AliExpress. Updated daily.",
+    "potentialAction":{{"@type":"SearchAction","target":"{SITE_URL}?q={{search_term_string}}","query-input":"required name=search_term_string"}}}}
+  </script>
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {{"@type":"Question","name":"What is RoboDeals?","acceptedAnswer":{{"@type":"Answer","text":"RoboDeals is a daily-updated gallery of the best robotics and tech gadgets available on AliExpress, with affiliate links and AI-generated descriptions."}}}},
+    {{"@type":"Question","name":"Are these products from AliExpress?","acceptedAnswer":{{"@type":"Answer","text":"Yes, all products link directly to AliExpress listings with affiliate tracking."}}}},
+    {{"@type":"Question","name":"How often is RoboDeals updated?","acceptedAnswer":{{"@type":"Answer","text":"RoboDeals is updated every day automatically with 100 new robotics and tech products."}}}},
+    {{"@type":"Question","name":"What categories are available?","acceptedAnswer":{{"@type":"Answer","text":"We cover Arduino, Raspberry Pi, ESP32, robot kits, drones, 3D printers, sensors, motors, smart home devices and more."}}}},
+    {{"@type":"Question","name":"How do I find a specific product?","acceptedAnswer":{{"@type":"Answer","text":"Use the search bar at the top of the page to filter products by keyword."}}}}
+  ]}}
+  </script>
+  <script type="application/ld+json">
+  {{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+    {{"@type":"ListItem","position":1,"name":"Home","item":"{SITE_URL}"}}
+  ]}}
+  </script>
   <style>
     *{{box-sizing:border-box;margin:0;padding:0}}
     :root{{--bg:#0a0a0f;--surface:#13131a;--surface2:#1c1c27;--border:#2a2a3a;
@@ -346,6 +367,11 @@ def build_index(products):
     .price{{font-family:'Space Mono',monospace;font-size:.88rem;font-weight:700;color:var(--accent)}}
     .tag{{font-size:.6rem;color:var(--muted);background:var(--surface2);border:1px solid var(--border);
           border-radius:20px;padding:2px 6px;font-family:'Space Mono',monospace;white-space:nowrap;overflow:hidden;max-width:90px;text-overflow:ellipsis}}
+    .cats{{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:20px;padding:0 16px}}
+    .cats a{{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--accent);
+             background:var(--surface2);border:1px solid var(--border);border-radius:20px;
+             padding:5px 14px;text-decoration:none;transition:all .2s;cursor:pointer}}
+    .cats a:hover{{background:var(--accent);color:#000;border-color:var(--accent)}}
     .empty{{text-align:center;padding:80px 20px;color:var(--muted);font-family:'Space Mono',monospace;display:none}}
     footer{{text-align:center;padding:32px 24px;border-top:1px solid var(--border);
             font-size:.72rem;color:var(--muted);font-family:'Space Mono',monospace;line-height:1.9}}
@@ -362,13 +388,24 @@ def build_index(products):
   </div>
   <div class="upd">🔄 {updated}</div>
 </div></header>
-<section class="hero">
-  <h1>Robotics &amp;<br>Tech Gadgets</h1>
-  <p>Top AliExpress affiliate deals, updated daily.</p>
+<section class="hero" itemscope itemtype="https://schema.org/WebPage">
+  <h1 itemprop="name">Best Robotics &amp; Tech Gadgets<br>from AliExpress</h1>
+  <p itemprop="description">Discover top-rated Arduino kits, robot arms, drones, ESP32 boards, Raspberry Pi accessories, 3D printers, sensors and smart home devices — all sourced from AliExpress with affiliate deals. Updated daily with 100 new products.</p>
   <div class="stats">
     <div class="stat"><strong id="tc">{len(products)}</strong>products</div>
     <div class="stat"><strong>100</strong>added daily</div>
     <div class="stat"><strong>4–7%</strong>commission</div>
+  </div>
+  <div class="cats">
+    <a href="javascript:void(0)" onclick="filterCat('arduino')">Arduino</a>
+    <a href="javascript:void(0)" onclick="filterCat('raspberry')">Raspberry Pi</a>
+    <a href="javascript:void(0)" onclick="filterCat('esp32')">ESP32</a>
+    <a href="javascript:void(0)" onclick="filterCat('robot')">Robots</a>
+    <a href="javascript:void(0)" onclick="filterCat('drone')">Drones</a>
+    <a href="javascript:void(0)" onclick="filterCat('sensor')">Sensors</a>
+    <a href="javascript:void(0)" onclick="filterCat('3d printer')">3D Printing</a>
+    <a href="javascript:void(0)" onclick="filterCat('motor')">Motors</a>
+    <a href="javascript:void(0)" onclick="filterCat('')">All</a>
   </div>
 </section>
 <div class="gw">
